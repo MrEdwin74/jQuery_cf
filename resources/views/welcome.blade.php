@@ -5,34 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Curso jQuery: Arrays</title>
+        <title>Curso jQuery: Objetos</title>
 
     </head>
     <body>
         <script type="text/javascript">
 
-            var arreglo = new Array();
+            var Gato = new gato("bola");
 
-            arreglo.push(3);
-            arreglo.push('hola mundo');
-            arreglo[0] = 'Edwin';
-            console.log(arreglo[0]);
+            function gato(nombre)
+            {
+                this.nombre = nombre;
+                this.maulla = function(){
+                    alert('MI');
+                };
+            }
 
-            var arreglo1 = [1,2,'tres',4 ];
-            console.log(arreglo1.length);
-
-            var arreglo2 = [[1,2,3,],['a','b','c','d','e']];
-            console.log(arreglo2[0].length);
-
-            var cadena = arreglo2[1].join('');
-            console.log(cadena);
-            var arreglo3 = cadena.split('');
-            console.log(arreglo3);
-
-            var cadena1 = 'a-bc';
-            var arreglo4 = cadena1.split('-');
-            console.log(arreglo4[0]);
-            console.log(arreglo4[1]);
+            alert("El nombre de el gato es: "+Gato.nombre);
+            Gato.maulla();
 
         </script>
     </body>
