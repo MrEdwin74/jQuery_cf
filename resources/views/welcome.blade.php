@@ -5,25 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Curso jQuery: Objetos</title>
+        <title>Curso jQuery: Primeros pasos en jQuery</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+        <script>
+            
+            $(document).ready(function(){
+                $('#prueba').text('hola mundo');
+                $('.prueba').html('<strong>Estoy usando jQuery</strong>');
+            });
+
+        </script>
 
     </head>
     <body>
-        <script type="text/javascript">
+        <div id="prueba">
+            
+        </div>
+        <div class="prueba">
+            
+        </div>
 
-            var Gato = new gato("bola");
-
-            function gato(nombre)
-            {
-                this.nombre = nombre;
-                this.maulla = function(){
-                    alert('MI');
-                };
-            }
-
-            alert("El nombre de el gato es: "+Gato.nombre);
-            Gato.maulla();
-
-        </script>
     </body>
 </html>
