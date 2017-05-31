@@ -5,26 +5,50 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Curso jQuery: Primeros pasos en jQuery</title>
+        <title>Curso jQuery: Selectores first part/title></title>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
         <script>
-            
             $(document).ready(function(){
-                $('#prueba').text('hola mundo');
-                $('.prueba').html('<strong>Estoy usando jQuery</strong>');
-            });
+                $('div.minDiv').css({
+                    'background-color':'#000',
+                    'opacity': 1,
+                    'color': 'red',
+                });
 
+                $('div.yourDiv article').css({
+                    'background-color':'#000',
+                    'opacity': 1,
+                    'color': 'red',
+                });
+
+                $('div.yourDiv article p').text('Your selector');
+
+                $('#Parrafo1, #Parrafo2, span').text('Commond text');
+    
+            });
+            
         </script>
 
     </head>
     <body>
-        <div id="prueba">
-            
+        <div class="minDiv">
+            <article>
+                <p>Hello jQuery</p>
+            </article>
         </div>
-        <div class="prueba">
-            
+        <div class="yourDiv">
+            <article>Min selector
+                <p></p>
+            </article>
         </div>
-
+        
+        <div>
+            <article>Min selector
+                <p id="Parrafo1"></p>
+                <p id="Parrafo2"></p>
+                <span></span>
+            </article>
+        </div>
     </body>
 </html>
