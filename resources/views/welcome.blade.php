@@ -5,23 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Curso jQuery: Selectores second part/title></title>
+        <title>Curso jQuery: Getters & setters/title></title>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
         <script>
             $(document).ready(function(){
 
-                var seleccion = $('.ejem1');
+                var store = $('#parrafo').html();
+                alert(store);
 
-                if(seleccion.length)
-                    console.log('Existen: '+seleccion.length+' elementos de class ejem1 .')
+                $('#test').attr('class','example');   // SET
 
-                seleccion.not('.cl1').text('Este elemento no tiene la class cl1');
+                var clase = $('#test').attr('class'); // GET
 
-                seleccion.has('p').text('Este un elemento tipo parrafo');
-
-                for(num=0;num<4;num++)
-                    $('li').eq(num).text('Soy el elemento numero '+num);
+                alert(clase);
     
             });
             
@@ -29,19 +26,10 @@
 
     </head>
     <body>
-        <div class="ejem1 cl1">
-            <p></p>
-        </div>
 
-        <div class="ejem1">
-            <span></span>
-        </div>
-
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+    <p id="parrafo">
+        <strong>Hello jQuery</strong>
+    </p>
+    <div id="test"></div>
     </body>
 </html>
