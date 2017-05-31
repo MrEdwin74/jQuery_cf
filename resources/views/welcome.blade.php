@@ -5,26 +5,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Curso jQuery: Selectores first part/title></title>
+        <title>Curso jQuery: Selectores second part/title></title>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
         <script>
             $(document).ready(function(){
-                $('div.minDiv').css({
-                    'background-color':'#000',
-                    'opacity': 1,
-                    'color': 'red',
-                });
 
-                $('div.yourDiv article').css({
-                    'background-color':'#000',
-                    'opacity': 1,
-                    'color': 'red',
-                });
+                var seleccion = $('.ejem1');
 
-                $('div.yourDiv article p').text('Your selector');
+                if(seleccion.length)
+                    console.log('Existen: '+seleccion.length+' elementos de class ejem1 .')
 
-                $('#Parrafo1, #Parrafo2, span').text('Commond text');
+                seleccion.not('.cl1').text('Este elemento no tiene la class cl1');
+
+                seleccion.has('p').text('Este un elemento tipo parrafo');
+
+                for(num=0;num<4;num++)
+                    $('li').eq(num).text('Soy el elemento numero '+num);
     
             });
             
@@ -32,23 +29,19 @@
 
     </head>
     <body>
-        <div class="minDiv">
-            <article>
-                <p>Hello jQuery</p>
-            </article>
+        <div class="ejem1 cl1">
+            <p></p>
         </div>
-        <div class="yourDiv">
-            <article>Min selector
-                <p></p>
-            </article>
+
+        <div class="ejem1">
+            <span></span>
         </div>
-        
-        <div>
-            <article>Min selector
-                <p id="Parrafo1"></p>
-                <p id="Parrafo2"></p>
-                <span></span>
-            </article>
-        </div>
+
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </body>
 </html>
