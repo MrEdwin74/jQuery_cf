@@ -7,18 +7,18 @@
 
         <title>Curso jQuery: Getters & setters/title></title>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
+        <style type="text/css">
+            .test
+            {
+                background: red;
+            }
+        </style>
         <script>
             $(document).ready(function(){
 
-                var store = $('#parrafo').html();
-                alert(store);
-
-                $('#test').attr('class','example');   // SET
-
-                var clase = $('#test').attr('class'); // GET
-
-                alert(clase);
+                $('#test').click(function(){
+                    $(this).addClass('test');
+                });
     
             });
             
@@ -26,10 +26,7 @@
 
     </head>
     <body>
-
-    <p id="parrafo">
-        <strong>Hello jQuery</strong>
     </p>
-    <div id="test"></div>
+    <div id="test">Hello jQuery</div>
     </body>
 </html>
